@@ -5,7 +5,7 @@ import {SingleGuess} from "./SingleGuess";
 function App() {
   return (
     <div className="App" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-      <SingleGuess playerName={"איתמר ניצן"} rightPlayerName={"עופרי ארד"}/>
+      <SingleGuess playerName={"איתמר ניצן"} rightPlayerName={"אוראל דגני"}/>
     </div>
   );
 }
