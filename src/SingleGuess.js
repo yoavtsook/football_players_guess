@@ -20,7 +20,7 @@ export const SingleGuess = ({playerId, rightPlayerId}) => {
       <div
         style={{display: 'flex', flexDirection: "row", marginTop: 10, justifyContent: 'center', alignItems: 'center'}}>
         {renderColumn(playerData["קבוצה"], playerData["קבוצה"] === rightPlayerData["קבוצה"] ? "green" : "grey")}
-        {renderColumn(playerData["גיל"], playerData["גיל"] === rightPlayerData["גיל"] ? "green" : (Math.abs(playerData["גיל"] - rightPlayerData["גיל"]) < 3 ? "yellow" : "grey"), Math.abs(playerData["גיל"] - rightPlayerData["גיל"]) < 3 ? (playerData["גיל"] > playerData["גיל"] ? "up" : "down") : undefined)}
+        {renderColumn(playerData["גיל"], playerData["גיל"] === rightPlayerData["גיל"] ? "green" : (Math.abs(playerData["גיל"] - rightPlayerData["גיל"]) < 3 ? "yellow" : "grey"), Math.abs(playerData["גיל"] - rightPlayerData["גיל"]) < 3 ? (playerData["גיל"] > rightPlayerData["גיל"] ? "up" : "down") : undefined)}
         {renderColumn(playerData["ישראלי/זר"], playerData["ישראלי/זר"] === rightPlayerData["ישראלי/זר"] ? "green" : "grey")}
         {renderColumn(playerData["פלייאוף"], playerData["פלייאוף"] === rightPlayerData["פלייאוף"] ? "green" : "grey")}
         {renderColumn(playerData["עמדה"], playerData["עמדה"] === rightPlayerData["עמדה"] ? "green" : "grey")}
