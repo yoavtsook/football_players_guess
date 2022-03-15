@@ -1,5 +1,6 @@
 import React from "react";
 import {players} from "./data";
+import {FaArrowAltCircleDown, FaArrowAltCircleUp} from "react-icons/fa";
 
 export const SingleGuess = ({playerId, rightPlayerId}) => {
   const playerData = players[playerId];
@@ -7,8 +8,9 @@ export const SingleGuess = ({playerId, rightPlayerId}) => {
 
   const renderColumn = (text, color, arrow) => {
     return (
-      <div style={{margin: 5, border: "1px solid black", backgroundColor: color}}>
-        {arrow && <span>{arrow}</span>}
+      <div style={{display: 'flex', flexDirection: 'row', margin: 5, border: "1px solid black", backgroundColor: color}}>
+        {arrow === "down" && <FaArrowAltCircleDown/>}
+        {arrow === "up" && <FaArrowAltCircleUp/>}
         <span>{text}</span>
       </div>
     )
