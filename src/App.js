@@ -29,8 +29,8 @@ function App() {
             }
             else {
               setGuessList([...guessList, data.id])
+              setGuesses(guesses + 1)
             }
-            setGuesses(guesses + 1)
           }}
           // onFocus={handleOnFocus}
           autoFocus
