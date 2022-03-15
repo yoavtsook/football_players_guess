@@ -1,9 +1,9 @@
 import React from "react";
 import {players} from "./data";
 
-export const SingleGuess = ({playerName, rightPlayerName}) => {
-  const playerData = players.find((data) => data["שם"] === playerName);
-  const rightPlayerData = players.find((data) => data["שם"] === rightPlayerName);
+export const SingleGuess = ({playerId, rightPlayerId}) => {
+  const playerData = players[playerId];
+  const rightPlayerData = players[rightPlayerId];
 
   const renderColumn = (text, color, arrow) => {
     return (
@@ -16,7 +16,7 @@ export const SingleGuess = ({playerName, rightPlayerName}) => {
 
   return (
     <div style={{display: 'flex', flexDirection: 'column', width: 300}}>
-      <span className={"title"}>{playerName}</span>
+      <span className={"title"}>{playerData.שם}</span>
       <div
         style={{display: 'flex', flexDirection: "row", marginTop: 10, justifyContent: 'center', alignItems: 'center'}}>
         {renderColumn(playerData["קבוצה"], playerData["קבוצה"] === rightPlayerData["קבוצה"] ? "green" : "grey")}
