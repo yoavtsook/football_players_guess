@@ -69,7 +69,7 @@ function App() {
   return (
     <div className="App"
          style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      {won ? renderWonState() : (guesses < MAX_GUESS ? renderContent() : renderLoseState())}
+      {won ? renderWonState() : (guesses <= MAX_GUESS ? renderContent() : renderLoseState())}
     </div>
   );
 }
