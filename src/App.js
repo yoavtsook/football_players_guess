@@ -60,7 +60,10 @@ function App() {
 
   const renderLoseState = () => {
     return (
+      <>
         <span style={{alignSelf: 'center'}}>{'הפסדת! נגמרו הניחושים, אולי בפעם הבאה...'}</span>
+        <span style={{alignSelf: 'center'}}>{`השחקן הנכון הוא ${players[rightPlayer].שם}`}</span>
+      </>
     )
   }
   return (
