@@ -8,7 +8,7 @@ export const SingleGuess = ({playerId, rightPlayerId}) => {
 
   const renderColumn = (text, color, arrow) => {
     return (
-      <div style={{display: 'flex', flexDirection: 'row', margin: 5, border: "1px solid black", backgroundColor: color}}>
+      <div style={{flex: 1, margin: 5, border: "1px solid black", backgroundColor: color}}>
         {arrow === "down" && <FaArrowAltCircleDown/>}
         {arrow === "up" && <FaArrowAltCircleUp/>}
         <span>{text}</span>
@@ -17,10 +17,10 @@ export const SingleGuess = ({playerId, rightPlayerId}) => {
   }
 
   return (
-    <div style={{display: 'flex', flexDirection: 'column', width: 300}}>
-      <span className={"title"}>{playerData.שם}</span>
+    <div style={{display: 'flex', flexDirection: 'column', width: "100%", border: "1px solid black", borderRadius: 10, marginTop: 10}}>
+      <h2>{playerData.שם}</h2>
       <div
-        style={{display: 'flex', flexDirection: "row", marginTop: 10, justifyContent: 'center', alignItems: 'center'}}>
+        style={{display: 'flex', flexDirection: "row", justifyContent: 'center', alignItems: 'center'}}>
         {renderColumn(playerData["קבוצה"], playerData["קבוצה"] === rightPlayerData["קבוצה"] ? "green" : "grey")}
         {renderColumn(playerData["גיל"], playerData["גיל"] === rightPlayerData["גיל"] ? "green" : (Math.abs(playerData["גיל"] - rightPlayerData["גיל"]) < 3 ? "yellow" : "grey"), Math.abs(playerData["גיל"] - rightPlayerData["גיל"]) < 3 ? (playerData["גיל"] > rightPlayerData["גיל"] ? "down" : "up") : undefined)}
         {renderColumn(playerData["ישראלי/זר"], playerData["ישראלי/זר"] === rightPlayerData["ישראלי/זר"] ? "green" : "grey")}

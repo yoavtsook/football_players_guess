@@ -6,6 +6,23 @@
   height: 40vmin;
   pointer-events: none;
 }
+.header {
+  padding: 60px;
+  text-align: center;
+  width: 100%;
+  height: 150px;
+  color: black;
+  font-size: 30px;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background: aliceblue;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
