@@ -8,7 +8,7 @@ export const SingleGuess = ({playerId, rightPlayerId}) => {
 
   const renderColumn = (text, color, arrow) => {
     return (
-      <div style={{flex: 1, margin: 5, border: "1px solid black", borderRadius: 10, backgroundColor: color}}>
+      <div style={{flex: 1, margin: 5, padding: 3, border: "1px solid black", borderRadius: 10, backgroundColor: color}}>
         {arrow === "down" && <FaArrowAltCircleDown/>}
         {arrow === "up" && <FaArrowAltCircleUp/>}
         <span>{text}</span>
