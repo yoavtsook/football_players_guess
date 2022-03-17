@@ -41,7 +41,7 @@ function App() {
         <span>{`ניחוש ${guesses} מתוך ${MAX_GUESS}`}</span>
         {renderAutoComplete()}
         <GuessCategory/>
-        <div style={{display: 'flex', flexDirection: 'column', width: "100%", maxHeight: 400, padding: 10, overflowY: "auto", overflowX: 'hidden'}}>
+        <div style={{display: 'flex', flexDirection: 'column', width: "100%", padding: 10}}>
           {guessList.map((id) => <SingleGuess key={id} playerId={id} rightPlayerId={rightPlayer}/>)}
         </div>
       </div>
