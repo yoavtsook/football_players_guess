@@ -41,7 +41,7 @@ function App() {
   }
   const renderContent = () => {
     return (
-      <div style={{marginTop: 15, width: 400, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <div style={{marginTop: 15, width: "80%", maxWidth: 600, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         <span>{`ניחוש ${guesses} מתוך ${MAX_GUESS}`}</span>
         {renderAutoComplete()}
         <GuessCategory/>
