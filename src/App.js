@@ -76,6 +76,7 @@ function App() {
         <h1>נחש את השחקן</h1>
         <img
           src={"https://scontent.fhfa1-1.fna.fbcdn.net/v/t1.6435-9/186508072_106382681636150_4377790422795253827_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=j4Egc3XSJXUAX9I6Vsk&tn=cR85U2iRMyxLL_hy&_nc_ht=scontent.fhfa1-1.fna&oh=00_AT9ZNBv0HADAMwwmyvb0k4LgYZNPwJ-UtxhDTgLKv906xQ&oe=62589E2C"}
+          alt={"logo"}
           style={{width: 100, height: 100, position: "absolute", top: 40, left: 40}}/>
       </div>
     )
