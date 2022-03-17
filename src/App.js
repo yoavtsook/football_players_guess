@@ -19,11 +19,9 @@ function App() {
   const [won, setWon] = useState(false);
   const renderAutoComplete = () => {
     return (
-      <div style={{width: 400, marginTop: 15}}>
+      <div style={{width: "100%", marginTop: 15}}>
         <ReactSearchAutocomplete
           items={playerNames}
-          // onSearch={handleOnSearch}
-          // onHover={handleOnHover}
           onSelect={(data) => {
             if (data.id === rightPlayer) {
               setWon(true);
@@ -32,20 +30,18 @@ function App() {
               setGuesses(guesses + 1)
             }
           }}
-          // onFocus={handleOnFocus}
           autoFocus
-          // formatResult={formatResult}
         />
       </div>
     )
   }
   const renderContent = () => {
     return (
-      <div style={{marginTop: 15, width: "100%", maxWidth: 600, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <div style={{marginTop: 15, width: "98%", maxWidth: 600, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         <span>{`ניחוש ${guesses} מתוך ${MAX_GUESS}`}</span>
         {renderAutoComplete()}
         <GuessCategory/>
-        <div style={{display: 'flex', flexDirection: 'column', width: "100%", padding: 10, height: 400}}>
+        <div style={{display: 'flex', flexDirection: 'column', width: "100%", maxHeight: 400, padding: 10, overflowY: "scroll", overflowX: 'hidden'}}>
           {guessList.map((id) => <SingleGuess key={id} playerId={id} rightPlayerId={rightPlayer}/>)}
         </div>
       </div>
@@ -78,8 +74,7 @@ function App() {
     )
   }
   return (
-    <div className="App"
-         style={{display: 'flex', flexDirection: 'column', alignItems: 'center', height: "100vh", width: "100vw"}}>
+    <div className="App">
       {renderHeader()}
       <div className={"content"}>
         {won ? renderWonState() : (guesses <= MAX_GUESS ? renderContent() : renderLoseState())}
