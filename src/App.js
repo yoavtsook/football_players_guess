@@ -5,7 +5,6 @@ import {useState} from "react";
 import {ReactSearchAutocomplete} from 'react-search-autocomplete'
 import {GuessCategory} from "./GuessCategory";
 import {isMobile} from "./utils";
-
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
