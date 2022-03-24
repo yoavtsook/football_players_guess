@@ -37,7 +37,14 @@ function App() {
   }
   const renderContent = () => {
     return (
-      <div style={{marginTop: 15, width: "98%", maxWidth: 600, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <div style={{
+        marginTop: 15,
+        width: "98%",
+        maxWidth: 600,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }}>
         <span>{`ניחוש ${guesses} מתוך ${MAX_GUESS}`}</span>
         {renderAutoComplete()}
         <GuessCategory/>
@@ -66,6 +73,17 @@ function App() {
     )
   }
 
+  const renderSiteData = () => {
+    return (
+      <div className={"site-data"}>
+        <img
+          src={"https://scontent.fhfa1-1.fna.fbcdn.net/v/t1.6435-9/186508072_106382681636150_4377790422795253827_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=RCclwt_93WsAX9phghw&_nc_ht=scontent.fhfa1-1.fna&oh=00_AT9iSv_PM9rDp3pGD-kcmlfPRYdgdmdYwsKo9DqiHwIa4w&oe=6260872C"}
+          style={{width: "5vw", height: "5vw"}}/>
+        <a href={"https://www.facebook.com/KeyPassIL"}><h2>KeyPass - מסירת מפתח</h2></a>
+      </div>
+    )
+  }
+
   const renderHeader = () => {
     return (
       <div className={"header"}>
@@ -76,6 +94,7 @@ function App() {
   return (
     <div className="App">
       {renderHeader()}
+      {renderSiteData()}
       <div className={"content"}>
         {won ? renderWonState() : (guesses <= MAX_GUESS ? renderContent() : renderLoseState())}
       </div>

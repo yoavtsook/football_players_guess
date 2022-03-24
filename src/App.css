@@ -22,16 +22,27 @@
   font-size: 20px;
 }
 
-.content {
-  flex: 1;
-  width: 100%;
-  padding-bottom: 100px;
+.site-data {
+  position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background: aliceblue;
+  align-items: center;
+  left: 50px;
+  top: 20px;
 }
 
+
+
 @media (prefers-reduced-motion: no-preference) {
+  .content {
+    flex: 1;
+    width: 100%;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    background: aliceblue;
+  }
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
