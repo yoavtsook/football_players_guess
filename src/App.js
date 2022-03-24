@@ -4,6 +4,7 @@ import {players} from "./data";
 import {useState} from "react";
 import {ReactSearchAutocomplete} from 'react-search-autocomplete'
 import {GuessCategory} from "./GuessCategory";
+import {isMobile} from "./utils";
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -74,6 +75,17 @@ function App() {
   }
 
   const renderSiteData = () => {
+    if (isMobile()){
+      return (
+        <div className={"site-data-mobile"}>
+          <img
+            alt="logo"
+            src={"https://scontent.fhfa1-1.fna.fbcdn.net/v/t1.6435-9/186508072_106382681636150_4377790422795253827_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=RCclwt_93WsAX9phghw&_nc_ht=scontent.fhfa1-1.fna&oh=00_AT9iSv_PM9rDp3pGD-kcmlfPRYdgdmdYwsKo9DqiHwIa4w&oe=6260872C"}
+            style={{width: "10vw", height: "10vw"}}/>
+          <a href={"https://www.facebook.com/KeyPassIL"}><h5>KeyPass - מסירת מפתח</h5></a>
+        </div>
+      )
+    }
     return (
       <div className={"site-data"}>
         <img
@@ -88,7 +100,7 @@ function App() {
   const renderHeader = () => {
     return (
       <div className={"header"}>
-        <h1>נחש את השחקן</h1>
+        <h1 style={{marginTop: isMobile() ? 125 : undefined}}>נחש את השחקן</h1>
       </div>
     )
   }
