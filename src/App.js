@@ -77,6 +77,7 @@ function App() {
     return (
       <div className={"site-data"}>
         <img
+          alt="logo"
           src={"https://scontent.fhfa1-1.fna.fbcdn.net/v/t1.6435-9/186508072_106382681636150_4377790422795253827_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=RCclwt_93WsAX9phghw&_nc_ht=scontent.fhfa1-1.fna&oh=00_AT9iSv_PM9rDp3pGD-kcmlfPRYdgdmdYwsKo9DqiHwIa4w&oe=6260872C"}
           style={{width: "5vw", height: "5vw"}}/>
         <a href={"https://www.facebook.com/KeyPassIL"}><h2>KeyPass - מסירת מפתח</h2></a>
